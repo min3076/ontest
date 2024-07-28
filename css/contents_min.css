@@ -198,9 +198,9 @@
 
 
 /* 평가기록 */
-.result_wrap.state::before{width:715px;height:587px;background:url(../images/contents/bg_result_wrap.png) 0 no-repeat;mix-blend-mode: darken;}
+.result_wrap.state::before{right:20px;width:715px;height:587px;background:url(../images/contents/bg_result_wrap.png) 0 no-repeat;mix-blend-mode: darken;}
 #content.result_wrap.state {padding:10rem 8rem 3rem}
-.result_wrap.state .sub_title h1{display:flex;flex-direction:column;gap:10px;}
+.result_wrap.state .sub_title h1{display:flex;flex-direction:column;gap:16px;}
 .result_wrap.state .item_subject b::before{display:none;}
 .result_wrap.state .info_box{background:#fff}
 
