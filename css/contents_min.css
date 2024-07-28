@@ -21,7 +21,7 @@
 .state .info_box .item_subject .tit{display:flex;align-items:center;}
 .state .info_box .item_subject .subject_list{width:100%;padding-top:20px;}
 .state .info_box .text_box{display:flex;flex-direction:row;gap:8px;padding:40px;color:var(--gray_80)}
-.state .info_box .text_box .item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:30px 30px;border:1px solid var(--blue_40);border-radius:8px;}
+.state .info_box .text_box .item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:30px 20px;border:1px solid var(--blue_40);border-radius:8px;}
 .state .info_box .text_box .item b{display:flex;flex-direction:column;align-items:center;font-weight:400;text-align:center;}
 .state .info_box .text_box .item b::before{content:'';display:block;width:36px;height:36px;margin-bottom:8px;background:url(/images/contents/ico_tit1.svg) no-repeat 50% 50%}
 .state .info_box .text_box .item.ico2 b::before{background-image:url(/images/contents/ico_tit2.svg)}
@@ -64,8 +64,8 @@
 .state #tab1 .info_box .text_box .item .numcycle div .clickClose{position:absolute;right:12px;top:-32px;width:28px;height:28px;font-size:0;border:0;background:url(/images/contents/ico_close.svg) no-repeat;cursor:pointer;}
 
 /* 회차별 */
-.state #tab2 .info_box .item_subject{width:408px;padding:50px;}
-.state #tab2 .info_box .text_box{width:calc(100% - 408px);}
+.state #tab2 .info_box .item_subject{width:340px;padding:50px;}
+.state #tab2 .info_box .text_box{width:calc(100% - 340px);}
 .state #tab2 .tabtop{display:flex;justify-content:space-between;}
 .state #tab2 .tabtop{margin-bottom:40px;}
 .state #tab2 .tabtop .student_info,
@@ -166,13 +166,14 @@
 
 /* 학생별평가-평가기록 */
 .state.student #tab1 .info_box .item_subject{width:50%;display:flex;flex-direction:column;align-items:flex-start;justify-content: space-between;}
-.state.student #tab1 .info_box .item_subject span{display:flex;align-items:center;font-size:36px;}
-.state.student #tab1 .info_box .item_subject span em{font-weight:bold;font-size:50px;}
-.state.student #tab1 .info_box .item_subject span span{margin:20px 0 0 4px;font-size:20px;}
+.state.student #tab1 .info_box .item_subject span{display:flex;align-items:center;font-size:28px;}
+.state.student #tab1 .info_box .item_subject span em{font-weight:bold;font-size:40px;}
+.state.student #tab1 .info_box .item_subject span span{margin:16px 0 0 4px;font-size:20px;}
 .state.student #tab1 .info_box .text_box{width:calc(100% - 50%);}
 .state.student #tab1 .info_box .text_box .item{justify-content:center;}
 
 /* 학생별평가-회차별 */
+.state.student .btn_share{position:absolute;right:112px;top:0;}
 .state.student #tab2 .info_box .item_subject{width:32%;}
 .state.student #tab2 .info_box .text_box{width:calc(100% - 32%);}
 .state.student .q_wrap div{width:100%;padding:50px;}
@@ -182,7 +183,7 @@
 
 
 /* 도넛그래프 */
-.doughnut-chart {position:relative;width:160px;height:160px;margin-left:40px;background: url(/images/contents/graphbg.svg) no-repeat 50% 50%;background-size:cover}
+.doughnut-chart {position:relative;width:160px;height:160px;margin-left:20px;background: url(/images/contents/graphbg.svg) no-repeat 50% 50%;background-size:cover}
 .doughnut-chart span{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--blue_100)}
 .doughnut-chart span b{font-size:32px}
 
