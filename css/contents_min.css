@@ -37,7 +37,7 @@
 .state .totalcommt{display:flex;align-items:center;gap:50px;margin-bottom:40px;padding:22px 40px;border:1px solid var(--gray_40);border-radius:8px;}
 .state .totalcommt strong{display:flex;flex-direction:column;justify-content:center;align-items:center;width:120px;height:120px;border-radius:100px 100px 12px 100px ;font-weight:bold;color:#fff;background:var(--blue_100)}
 .state .totalcommt strong::before{content:'';display:block;width:40px;height:40px;background:url(/images/contents/ico_commt.svg) no-repeat}
-.state .totalcommt ul{width:calc(100% - 120px);margin-top:20px;}
+.state .totalcommt ul{width:calc(100% - 170px);margin-top:20px;}
 .state .totalcommt ul li{position:relative;padding:0 0 10px 24px;color:var(--gray_80)}
 .state .totalcommt ul li::before{content:'';position:absolute;left:0;top:0;display:block;width:40px;height:40px;background:url(/images/contents/ico_bul.svg) no-repeat}
 
