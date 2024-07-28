@@ -43,7 +43,7 @@
 
 
 /* 성장기록 */
-.state #tab1 .info_box .item_subject{width:408px;padding:50px;}
+.state #tab1 .info_box .item_subject{width:408px;padding:50px 40px;}
 .state #tab1 .info_box .text_box{width:calc(100% - 408px);}
 .state #tab1 .info_box .text_box .item{padding:0;}
 .state #tab1 .info_box .text_box .item .title{display:block;width:100%;padding:20px 0 15px;background:var(--blue_10);font-family:var(--f_scd);font-weight:500;font-size:20px;color:var(--gray_80);border-radius:8px 8px 0 0 }
