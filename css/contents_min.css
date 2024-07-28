@@ -31,7 +31,7 @@
 .state .info_box .text_box .item p a{text-decoration:underline;}
 .state .info_box .text_box .item span{font-size:15px;}
 
-.state .info_box .text_box.col3 .item{width:33.3%}
+.state .info_box .text_box.col3 .item{width:36.3%}
 .state .info_box .text_box.col4 .item{width:25%}
 
 .state .totalcommt{display:flex;align-items:center;gap:50px;margin-bottom:40px;padding:22px 40px;border:1px solid var(--gray_40);border-radius:8px;}
@@ -168,7 +168,7 @@
 .state.student #tab1 .info_box .item_subject{width:40%;display:flex;flex-direction:column;align-items:flex-start;justify-content: space-between;}
 .state.student #tab1 .info_box .item_subject span{display:flex;align-items:center;font-size:28px;}
 .state.student #tab1 .info_box .item_subject span em{font-weight:bold;font-size:40px;}
-.state.student #tab1 .info_box .item_subject span span{margin:16px 0 0 4px;font-size:20px;}
+.state.student #tab1 .info_box .item_subject span span{margin:10px 0 0 4px;font-size:20px;font-weight:bold}
 .state.student #tab1 .info_box .item_subject .countnum p{font-size:15px}
 .state.student #tab1 .info_box .text_box{width:calc(100% - 40%);}
 .state.student #tab1 .info_box .text_box .item{justify-content:center;}
@@ -198,6 +198,8 @@
 
 
 /* 평가기록 */
+.result_wrap.state::before{width:715px;height:467px;background:url(../images/contents/bg_result_wrap.png) 0 no-repeat;mix-blend-mode: darken;}
+#content.result_wrap.state {padding:10rem 8rem 3rem}
 .result_wrap.state .sub_title h1{display:flex;flex-direction:column;gap:10px;}
 .result_wrap.state .item_subject b::before{display:none;}
 .result_wrap.state .info_box{background:#fff}
