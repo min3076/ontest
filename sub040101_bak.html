@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>온평가 > 미리보기</title>
+    
+        <link rel="stylesheet" href="/css/slick.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/contents.css">
+
+        <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="/js/slick.js"></script>
+        <script type="text/javascript" src="/js/chart.js"></script>
+
+        <script type="text/javascript" src="/js/include.js"></script>
+        <script type="text/javascript" src="/js/contents.js"></script>
+
+    </head>
+
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<div id="header"></div>
+<!--[include]HEADER :: End -->
+
+<main id="container" class="sub">
+    <section class="sub_header">
+        <div class="login_info">
+            <div class="info_item">
+                <i class="sicon ico1"></i><span class="name"><b>김평가</b>선생님</span>
+                <span class="scoolname">충남초등학교</span>
+            </div>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+
+        <div id="location">
+            <a href="#" class="item home"><span>홈</span></a>
+            <a href="#" class="item">문제은행</a>
+            <a href="#" class="item">생성하기</a>
+        </div>
+
+        <div class="sub_title">
+            <h1>학생별 통계</h1>
+            <p>평가 참여 학생의 개별 통계를 확인합니다.</p>
+        </div>
+    </section><!--//sub_header-->
+
+    <section id="content" class="class_wrap stdStat">
+        <div class="layout">
+            <div class="class_list">
+                <div class="title_box">
+                    <strong class="subtitle">
+                        <i class="hico hico3"></i>
+                        학생목록
+                        <p class="description">※번호를 클릭하시면 해당 학생의 통계를 보실 수 있습니다.</p>
+                    </strong>
+                </div>
+                <div class="table_wrap">
+                    <table class="tbl_basic center table-hover">
+                        <caption>학생 목록</caption>
+                        <colgroup>
+                            <col style="width:5%">
+                            <col style="width:5%">
+                            <col style="width:8%">
+                            <col style="width:8%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">학년</th>
+                                <th scope="col">반</th>
+                                <th scope="col">번호</th>
+                                <th scope="col">이름</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum active">1</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">2</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">3</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">4</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">5</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">6</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">7</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">8</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">9</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">10</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">11</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">12</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">13</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">14</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">15</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">16</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">17</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">18</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">19</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>1</td>
+                                <td><a href="#" class="btn btn-ani classNum">20</a></td>
+                                <td>홍길동</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>
+            </div>
+            <div class="student_stat_wrap">
+                <div class="student_stat_info">
+                    <ul class="student_info">
+                        <li><span>학교명</span>충남초등학교</li>
+                        <li><span>학년</span>5</li>
+                        <li><span>반</span>1</li>
+                        <li><span>번호</span>3</li>
+                        <li><span>이름</span>홍길동</li>
+                    </ul>
+                    <p class="description">※과목을 클릭하시면 그래프를 보실 수 있습니다.</p>
+                </div>
+                <div class="tabs stat_tab">
+                    <div class="tab-header">
+                        <button rel="tab1" class="active">
+                            <ul>
+                                <li>국어</li>
+                                <li>80점</li>
+                                <li>10회</li>
+                            </ul>
+                        </button>
+                        <button rel="tab2">
+                            <ul>
+                                <li>수학</li>
+                                <li>80점</li>
+                                <li>10회</li>
+                            </ul>
+                        </button>
+                        <button rel="tab3">
+                            <ul>
+                                <li>사회</li>
+                                <li>80점</li>
+                                <li>10회</li>
+                            </ul>
+                        </button>
+                        <button rel="tab4">
+                            <ul>
+                                <li>과학</li>
+                                <li>80점</li>
+                                <li>10회</li>
+                            </ul>
+                        </button>
+                        <button rel="tab5">
+                            <ul>
+                                <li>영어</li>
+                                <li>80점</li>
+                                <li>3회</li>
+                            </ul>
+                        </button>
+                    </div>
+
+                    <div class="tab-body" id="tab1">
+                        <div class="graph_wrap">
+                            <div class="inner" id="graph_wrap1">
+                                <canvas id="averageChart1"></canvas>
+                            </div>
+                        </div>
+                        <div id="custom-legend1" class="legend_wrap"></div>
+                        <div class="btn_group">
+                            <a href="/sub040102.html" class="btn btn-ani btn-primary"><i class="sicon ico8"></i>세부결과</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-body" id="tab2">
+                        <div class="graph_wrap">
+                            <div class="inner" id="graph_wrap2">
+                                <canvas id="averageChart2"></canvas>
+                            </div>
+                        </div>
+                        <div id="custom-legend2" class="legend_wrap"></div>
+                        <div class="btn_group">
+                            <a href="#" class="btn btn-ani btn-primary"><i class="sicon ico8"></i>세부결과</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-body" id="tab3">
+                        <div class="graph_wrap">
+                            <div class="inner" id="graph_wrap3">
+                                <canvas id="averageChart3"></canvas>
+                            </div>
+                        </div>
+                        <div id="custom-legend3" class="legend_wrap"></div>
+                        <div class="btn_group">
+                            <a href="#" class="btn btn-ani btn-primary"><i class="sicon ico8"></i>세부결과</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-body" id="tab4">
+                        <div class="graph_wrap">
+                            <div class="inner" id="graph_wrap4">
+                                <canvas id="averageChart4"></canvas>
+                            </div>
+                        </div>
+                        <div id="custom-legend4" class="legend_wrap"></div>
+                        <div class="btn_group">
+                            <a href="#" class="btn btn-ani btn-primary"><i class="sicon ico8"></i>세부결과</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-body" id="tab5">
+                        <div class="graph_wrap">
+                            <div class="inner" id="graph_wrap5">
+                                <canvas id="averageChart5"></canvas>
+                            </div>
+                        </div>
+                        <div id="custom-legend5" class="legend_wrap"></div>
+                        <div class="btn_group">
+                            <a href="#" class="btn btn-ani btn-primary"><i class="sicon ico8"></i>세부결과</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--[include]HEADER :: Start -->
+<div id="footer"></div>
+<!--[include]HEADER :: End -->
+
+</main>
+
+</div>
+
+<script>
+    function createChart(ctx, legendContainerId, chartData) {
+            var chart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio :false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    customLegend: {
+                        afterUpdate: function(chart) {
+                        var legendContainer = document.getElementById(legendContainerId);
+                        legendContainer.innerHTML = chart.generateLegend();
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100,
+                        ticks: { stepSize: 10 },
+                    },
+                    x: {
+                        grid: { color: 'transparent'},
+                    },
+                },
+            },
+        });
+
+        chart.generateLegend = function() {
+            var text = '<ul>';
+            chart.data.datasets.forEach(function(dataset, index) {
+                text += '<li onclick="toggleDataset(' + index + ', \'' + legendContainerId + '\')">';
+                text += '<span></span>';// style="background-color:' + dataset.borderColor + '"
+                text += dataset.label;
+                text += '</li>';
+            });
+            text += '</ul>';
+            return text;
+        };
+
+        return chart;
+    }
+
+    // 데이터셋 토글 기능
+    function toggleDataset(index, legendContainerId) {
+        var chart;
+        switch(legendContainerId) {
+            case 'custom-legend1': chart = chart1; break;
+            case 'custom-legend2': chart = chart2; break;
+            case 'custom-legend3': chart = chart3; break;
+            case 'custom-legend4': chart = chart4; break;
+            case 'custom-legend5': chart = chart5; break;
+        }
+        var meta = chart.getDatasetMeta(index);
+        meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+        chart.update();
+    }
+
+    var chartData1 = {
+        labels: ['3월 13일', '4월 1일', '4월 11일', '5월 1일', '6월 1일', '6월 12일', '7월 4일', '8월 1일', '9월 1일', '9월 10일', '12월 1일'],
+        datasets: [
+            {
+                label: '점수',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100, 90],
+            },
+            {
+                label: '반평균',
+                type: 'line',
+                borderWidth: 1,
+                backgroundColor: 'rgb(230, 142, 171)',
+                borderColor: 'rgb(230, 142, 171)',
+                data: [30, 60, 70, 60, 80, 90, 80, 95, 77, 80, 90],
+            },
+            {
+                label: '성장',
+                type: 'line',
+                borderWidth: 1,
+                borderDash: [4, 4],
+                backgroundColor: 'rgb(66, 211, 177)',
+                borderColor: 'rgb(66, 211, 177)',
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100, 90],
+            },
+        ]
+    };
+
+    var chartData2 = {
+        labels: ['1월 1일', '2월 1일', '3월 1일', '4월 1일', '5월 1일', '6월 1일', '7월 1일', '8월 1일', '9월 1일', '10월 1일'],
+        datasets: [
+            {
+                label: '점수',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+            {
+                label: '반평균',
+                type: 'line',
+                borderWidth: 1,
+                backgroundColor: 'rgb(230, 142, 171)',
+                borderColor: 'rgb(230, 142, 171)',
+                data: [30, 60, 70, 60, 80, 90, 80, 95, 77, 80],
+            },
+            {
+                label: '성장',
+                type: 'line',
+                borderWidth: 1,
+                borderDash: [4, 4],
+                backgroundColor: 'rgb(66, 211, 177)',
+                borderColor: 'rgb(66, 211, 177)',
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+        ]
+    };
+
+    var chartData3 = {
+        labels: ['1월 1일', '2월 1일', '3월 1일', '4월 1일',],
+        datasets: [
+            {
+                label: '점수',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+            {
+                label: '반평균',
+                type: 'line',
+                borderWidth: 1,
+                backgroundColor: 'rgb(230, 142, 171)',
+                borderColor: 'rgb(230, 142, 171)',
+                data: [30, 60, 70, 60, 80, 90, 80, 95, 77, 80],
+            },
+            {
+                label: '성장',
+                type: 'line',
+                borderWidth: 1,
+                borderDash: [4, 4],
+                backgroundColor: 'rgb(66, 211, 177)',
+                borderColor: 'rgb(66, 211, 177)',
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+        ]
+    };
+
+    var chartData4 = {
+        labels: ['1월 1일', '2월 1일', '3월 1일', '4월 1일', '5월 1일', '6월 1일', '7월 1일',],
+        datasets: [
+            {
+                label: '점수',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+            {
+                label: '반평균',
+                type: 'line',
+                borderWidth: 1,
+                backgroundColor: 'rgb(230, 142, 171)',
+                borderColor: 'rgb(230, 142, 171)',
+                data: [30, 60, 70, 60, 80, 90, 80, 95, 77, 80],
+            },
+            {
+                label: '성장',
+                type: 'line',
+                borderWidth: 1,
+                borderDash: [4, 4],
+                backgroundColor: 'rgb(66, 211, 177)',
+                borderColor: 'rgb(66, 211, 177)',
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+        ]
+    };
+
+    var chartData5 = {
+        labels: ['1월 1일', '2월 1일', '3월 1일', '4월 1일', '5월 1일', '6월 1일', '7월 1일',],
+        datasets: [
+            {
+                label: '점수',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+            {
+                label: '반평균',
+                type: 'line',
+                borderWidth: 1,
+                backgroundColor: 'rgb(230, 142, 171)',
+                borderColor: 'rgb(230, 142, 171)',
+                data: [30, 60, 70, 60, 80, 90, 80, 95, 77, 80],
+            },
+            {
+                label: '성장',
+                type: 'line',
+                borderWidth: 1,
+                borderDash: [4, 4],
+                backgroundColor: 'rgb(66, 211, 177)',
+                borderColor: 'rgb(66, 211, 177)',
+                data: [20, 30, 60, 50, 40, 70, 60, 80, 90, 100],
+            },
+        ]
+    };
+
+    var chart1 = createChart(document.getElementById('averageChart1').getContext('2d'), 'custom-legend1', chartData1);
+    var chart2 = createChart(document.getElementById('averageChart2').getContext('2d'), 'custom-legend2', chartData2);
+    var chart3 = createChart(document.getElementById('averageChart3').getContext('2d'), 'custom-legend3', chartData3);
+    var chart4 = createChart(document.getElementById('averageChart4').getContext('2d'), 'custom-legend4', chartData4);
+    var chart5 = createChart(document.getElementById('averageChart5').getContext('2d'), 'custom-legend5', chartData5);
+
+    document.getElementById('custom-legend1').innerHTML = chart1.generateLegend();
+    document.getElementById('custom-legend2').innerHTML = chart2.generateLegend();
+    document.getElementById('custom-legend3').innerHTML = chart3.generateLegend();
+    document.getElementById('custom-legend4').innerHTML = chart4.generateLegend();
+    document.getElementById('custom-legend5').innerHTML = chart5.generateLegend();
+                
+
+    //그래프 가로 사이즈 조절
+    const container = document.querySelector('#graph_wrap1');
+    const totalLables = chart1.data.labels.length;
+    if (totalLables > 10) {
+    const newWidth = 1000 + (totalLables - 10) * 30;
+    container.style.width = newWidth + 'px';
+    };
+
+    const container2 = document.querySelector('#graph_wrap2');
+    const totalLables2 = chart2.data.labels.length;
+    if (totalLables2 > 10) {
+    const newWidth2 = 1000 + (totalLables2 - 10) * 30;
+    container2.style.width = newWidth2 + 'px';
+    };
+
+    const container3 = document.querySelector('#graph_wrap3');
+    const totalLables3 = chart3.data.labels.length;
+    if (totalLables1 > 10) {
+    const newWidth3 = 1000 + (totalLables3 - 10) * 30;
+    container3.style.width = newWidth3 + 'px';
+    };
+
+    const container4 = document.querySelector('#graph_wrap4');
+    const totalLables4 = chart4.data.labels.length;
+    if (totalLables1 > 10) {
+    const newWidth4 = 1000 + (totalLables4 - 10) * 30;
+    container4.style.width = newWidth4 + 'px';
+    };
+
+    const container5 = document.querySelector('#graph_wrap5');
+    const totalLables5 = chart5.data.labels.length;
+    if (totalLables1 > 10) {
+    const newWidth5 = 1000 + (totalLables5 - 10) * 30;
+    container5.style.width = newWidth5 + 'px';
+    };
+
+</script>
+
+</body>
+</html>
