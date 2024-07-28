@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>온평가 > 미리보기</title>
+    
+        <link rel="stylesheet" href="/css/slick.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/question.css">
+        <link rel="stylesheet" href="/css/contents.css">
+
+        <link rel="stylesheet" href="/css/contents_min.css">
+
+        <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="/js/slick.js"></script>
+        <script type="text/javascript" src="/js/chart.js"></script>
+
+        <script type="text/javascript" src="/js/include.js"></script>
+        <script type="text/javascript" src="/js/contents.js"></script>
+
+    </head>
+
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<div id="header"></div>
+<!--[include]HEADER :: End -->
+
+<main id="container" class="sub">
+    <section id="content" class="result_wrap state">
+        <div class="layout">
+            <div class="sub_title">
+                <h1>
+                    <i class="ico_logo type1">온평가</i> 
+                    평가기록
+                </h1>
+
+                <div class="inner">
+                    <ul class="student_info">
+                        <li><span>학교명</span>충남초등학교</li>
+                        <li><span>학년</span>5</li>
+                        <li><span>반</span>1</li>
+                        <li><span>번호</span>3</li>
+                        <li><span>이름</span>홍길동</li>
+                    </ul>
+                    <div class="btn_group">
+                        <a href="#" class="btn btn-ani btn-text"><i class="sicon ico_print"></i>인쇄하기</a>
+                        <a href="#" class="btn btn-ani btn-text"><i class="sicon ico_share"></i>공유하기</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text_info">
+                <div class="info_box">
+
+                    <div class="item_subject">
+                        <span class="tit">
+                            <b>과학</b>
+                        </span>
+                        <ul class="subject_list">
+                            <li>1. 지구와 달의 운동</li>
+                            <li>2. 여러 가지 기체</li>   
+                        </ul>
+                    </div>
+                    <div class="text_box col3">
+                        <div class="item">
+                            <b>응시일</b>
+                            <p>2025.4.3</p>
+                        </div>
+                        <div class="item ico2">
+                            <b>총 문항 수</b>
+                            <p>20문항</p>
+                            <span>상 5 / 중 10 / 하 5</span>
+                        </div>
+                    
+                        <!-- 원그랲프 들어가는 자리 -->
+                        <div class="doughnut-chart" id="doughnutChart">
+                            <span>전체정답률<b>75%</b></span>
+                            <canvas id="doughnutChartCanvas"></canvas>
+                        </div>
+                        <!-- //원그랲프 들어가는 자리 -->
+                    </div>
+                </div>
+                <div class="totalcommt">
+                    <strong>종합의견</strong>
+                    <ul>
+                        <li><b>홍길동</b> 학생은 <b>낮과 밤이 생기는 까닭</b>을 잘 알고 관련된 문항의 정답률이 높은 모습을 보이고 있으며, </li>
+                        <li><b>지구의 공전과 별자리의 관계, 계절에 따른 별자리</b> 관련 문항을 풀이하는 데 어려움을 보이고 있습니다</li>
+                    </ul>
+                </div>
+                <div class="title_box">
+                    <strong class="subtitle">평가 문항정보</strong>
+                </div>
+                <table class="tbl_basic center table-hover">
+                    <caption>평가문항정보</caption>
+                    <colgroup>
+                        <col style="width:5%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:auto">
+                        <col style="width:7%">
+                        <col style="width:5%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">단원</th>
+                            <th scope="col">성취기준</th>
+                            <th scope="col">평가요소</th>
+                            <th scope="col">정답여부</th>
+                            <th scope="col">보기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>2.지구와 달의 운동</td>
+                            <td>[6과09-01]</td>
+                            <td>낮과 밤이 생기는 까닭</td>
+                            <td><i class="sicon ico_o">정답</i></td>
+                            <td><a href="#" class="micon ico7">자세히보기</a></td>
+                        </tr>
+                        <tr class="active">
+                            <th scope="row">01</th>
+                            <td>2.지구와 달의 운동</td>
+                            <td>[6과09-01]</td>
+                            <td>낮과 밤이 생기는 까닭</td>
+                            <td><i class="sicon ico_o">정답</i></td>
+                            <td><a href="#" class="icon arr_blue">펼침닫기</a></td>
+                        </tr>
+                        <!-- active -->
+                        <tr>
+                            <td colspan="8">
+                                <ul class="tit_list">
+                                    <li><b>학생응답</b>4,5 </li>
+                                    <li class="correct"><b>정답</b>4,5</li>
+                                </ul>
+                                <div class="q_wrap">
+                                    <div><img src="/images/contents/img_question.png" alt=""></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- //active -->
+                        <tr>
+                            <th scope="row">01</th>
+                            <td>2.지구와 달의 운동</td>
+                            <td>[6과09-01]</td>
+                            <td>낮과 밤이 생기는 까닭</td>
+                            <td><i class="sicon ico_x">오답</i></td>
+                            <td><a href="#" class="micon ico7">자세히보기</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+        <div class="btn_group">
+            <a href="/sub040101.html" class="btn btn-ani btn-primary lg">돌아가기</a>
+        </div>
+    </section>
+    
+<!--[include]HEADER :: Start -->
+<div id="footer"></div>
+<!--[include]HEADER :: End -->
+
+</main>
+
+</div>
+
+<script>
+    function createChart(ctx, chartData) {
+            var chart = new Chart(ctx, {
+            type: 'radar',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio :false,
+                plugins: {
+                    legend: {display: false},
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        pointLabels: {
+                            font: {
+                                size: 16,
+                                family:'score',
+                                weight:'600'
+                            }
+                        },
+                        min: 0,
+                        max: 100,
+                        ticks: { stepSize: 10 },
+                    }
+			    }
+            },
+        });
+
+        return chart;
+    }
+
+    var chartData1 = {
+        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
+        datasets: [
+            {
+                label: '정답률',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                data: [20, 50, 90, 70, 90],
+            }
+        ]
+    };
+
+    var chartData2 = {
+        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
+        datasets: [
+            {
+                label: '정답률',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                data: [100, 30, 60, 50, 40],
+            }
+        ]
+    };
+
+    var chartData3 = {
+        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
+        datasets: [
+            {
+                label: '정답률',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                data: [100, 30, 60, 50, 40],
+            }
+        ]
+    };
+
+    var chartData4 = {
+        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
+        datasets: [
+            {
+                label: '정답률',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                data: [100, 30, 60, 50, 40],
+            }
+        ]
+    };
+
+    var chartData5 = {
+        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
+        datasets: [
+            {
+                label: '정답률',
+                backgroundColor: 'rgba(133, 196, 255, .3)',
+                borderWidth: 1,
+                borderColor: 'rgba(133, 196, 255, 1)',
+                data: [100, 30, 60, 50, 40],
+            }
+        ]
+    };
+
+    var chart1 = createChart(document.getElementById('resultChart1').getContext('2d'), chartData1);
+    var chart2 = createChart(document.getElementById('resultChart2').getContext('2d'), chartData2);
+    var chart3 = createChart(document.getElementById('resultChart3').getContext('2d'), chartData3);
+    var chart4 = createChart(document.getElementById('resultChart4').getContext('2d'), chartData4);
+    var chart5 = createChart(document.getElementById('resultChart5').getContext('2d'), chartData5);
+
+</script>
+</body>
+</html>
