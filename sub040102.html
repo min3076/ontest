@@ -177,107 +177,36 @@
 </div>
 
 <script>
-    function createChart(ctx, chartData) {
-            var chart = new Chart(ctx, {
-            type: 'radar',
-            data: chartData,
-            options: {
-                responsive: true,
-                maintainAspectRatio :false,
-                plugins: {
-                    legend: {display: false},
-                },
-                scales: {
-                    r: {
-                        beginAtZero: true,
-                        pointLabels: {
-                            font: {
-                                size: 16,
-                                family:'score',
-                                weight:'600'
-                            }
-                        },
-                        min: 0,
-                        max: 100,
-                        ticks: { stepSize: 10 },
-                    }
-			    }
-            },
-        });
-
-        return chart;
+     //원그래프
+     const canvas = document.getElementById("doughnutChartCanvas");
+    const value = 60;
+    const data = {
+    datasets: [
+        {
+        data: [value, 100 - value],
+        backgroundColor: ["#3157DD", "transparent"],
+        borderWidth: 0,
+        borderRadius: 30,
+        },
+    ],
+    };
+    const options = {
+        cutout: '85%',
+        hover: { mode: null },
+        plugins: {
+        legend: {
+            display: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+        },
     }
-
-    var chartData1 = {
-        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
-        datasets: [
-            {
-                label: '정답률',
-                backgroundColor: 'rgba(133, 196, 255, .3)',
-                borderWidth: 1,
-                borderColor: 'rgba(133, 196, 255, 1)',
-                data: [20, 50, 90, 70, 90],
-            }
-        ]
-    };
-
-    var chartData2 = {
-        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
-        datasets: [
-            {
-                label: '정답률',
-                backgroundColor: 'rgba(133, 196, 255, .3)',
-                borderWidth: 1,
-                borderColor: 'rgba(133, 196, 255, 1)',
-                data: [100, 30, 60, 50, 40],
-            }
-        ]
-    };
-
-    var chartData3 = {
-        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
-        datasets: [
-            {
-                label: '정답률',
-                backgroundColor: 'rgba(133, 196, 255, .3)',
-                borderWidth: 1,
-                borderColor: 'rgba(133, 196, 255, 1)',
-                data: [100, 30, 60, 50, 40],
-            }
-        ]
-    };
-
-    var chartData4 = {
-        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
-        datasets: [
-            {
-                label: '정답률',
-                backgroundColor: 'rgba(133, 196, 255, .3)',
-                borderWidth: 1,
-                borderColor: 'rgba(133, 196, 255, 1)',
-                data: [100, 30, 60, 50, 40],
-            }
-        ]
-    };
-
-    var chartData5 = {
-        labels: ['듣기・말하기', '읽기', '쓰기', '문법', '문학'],
-        datasets: [
-            {
-                label: '정답률',
-                backgroundColor: 'rgba(133, 196, 255, .3)',
-                borderWidth: 1,
-                borderColor: 'rgba(133, 196, 255, 1)',
-                data: [100, 30, 60, 50, 40],
-            }
-        ]
-    };
-
-    var chart1 = createChart(document.getElementById('resultChart1').getContext('2d'), chartData1);
-    var chart2 = createChart(document.getElementById('resultChart2').getContext('2d'), chartData2);
-    var chart3 = createChart(document.getElementById('resultChart3').getContext('2d'), chartData3);
-    var chart4 = createChart(document.getElementById('resultChart4').getContext('2d'), chartData4);
-    var chart5 = createChart(document.getElementById('resultChart5').getContext('2d'), chartData5);
+    new Chart(canvas, {
+    type: "doughnut",
+    data,
+    options,
+    });
 
 </script>
 </body>
