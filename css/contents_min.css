@@ -142,8 +142,8 @@
 .state #tab3 .legend_wrap li div{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding-top:6px;margin-top:6px;}
 .state #tab3 .legend_wrap li div:last-child{border-top:1px solid var(--gray_20)}
 
-.state .legend_wrap.type2{flex-direction:column;gap:12px;border:0;padding:0;}
-.state .legend_wrap.type2 li{flex-direction:column;align-items:center;width:100%;padding:40px 20px;border:1px solid var(--gray_40);border-radius:8px;}
+.state #tab3 .legend_wrap.type2{flex-direction:column;gap:12px;border:0;padding:0;}
+.state #tab3 .legend_wrap.type2 li{flex-direction:column;align-items:center;width:100%;padding:40px 20px;border:1px solid var(--gray_40);border-radius:8px;}
 
 
 /* 학생별평가 */
