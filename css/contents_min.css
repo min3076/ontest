@@ -167,7 +167,7 @@
 /* 학생별평가-평가기록 */
 .state.student #tab1 .info_box .item_subject{width:40%;display:flex;flex-direction:column;align-items:flex-start;justify-content: space-between;}
 .state.student #tab1 .info_box .item_subject span{display:flex;align-items:center;font-size:28px;}
-.state.student #tab1 .info_box .item_subject span em{font-weight:bold;font-size:40px;}
+.state.student #tab1 .info_box .item_subject span em{font-weight:bold;font-size:36px;}
 .state.student #tab1 .info_box .item_subject span span{margin:10px 0 0 4px;font-size:20px;font-weight:bold}
 .state.student #tab1 .info_box .item_subject .countnum p{font-size:15px}
 .state.student #tab1 .info_box .text_box{width:calc(100% - 40%);}
