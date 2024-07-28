@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="/css/common.css">
         <link rel="stylesheet" href="/css/question.css">
         <link rel="stylesheet" href="/css/contents.css">
+        <link rel="stylesheet" href="/css/contents_min.css">
 
         <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="/js/jquery-latest.min.js"></script>
@@ -41,177 +42,680 @@
 
         <div id="location">
             <a href="#" class="item home"><span>홈</span></a>
-            <a href="#" class="item">문제은행</a>
-            <a href="#" class="item">생성하기</a>
+            <a href="#" class="item">통계</a>
+            <a href="#" class="item">학급통계</a>
         </div>
 
         <div class="sub_title">
             <h1>학급통계</h1>
-            <p>과목별로 학급 전체 통계를 확인합니다.</p>
+            <p>학급의 통계를 확인합니다.</p>
         </div>
     </section><!--//sub_header-->
 
-    <section id="content" class="class_wrap average">
+    <section id="content" class="manager_wrap state">
         <div class="layout">
-            <div class="class_info">
-                <ul class="class_info_item num1">
-                    <li><i class="micon ico2"></i>충남초등학교</li>
-                    <li>
-                        <div class="select_wrap">
-                            <select class="select" id="select1">
-                                <option selected>선택</option>
-                                <option value="">6</option>
-                                <option value="">5</option>
-                                <option value="">4</option>
-                                <option value="">3</option>
-                                <option value="">2</option>
-                                <option value="">1</option>
-                            </select>
-                            <label for="select1">학년</label>
-                        </div>
-                        <div class="select_wrap">
-                            <select class="select" id="select2">
-                                <option selected>선택</option>
-                                <option value="">6</option>
-                                <option value="">5</option>
-                                <option value="">4</option>
-                                <option value="">3</option>
-                                <option value="">2</option>
-                                <option value="">1</option>
-                            </select>
-                            <label for="select2">반</label>
-                        </div>
-                    </li>
-                </ul>
-                <div class="class_info_item num2">
-                    <span>전체</span>
-                    <span class="state tx">21명</span>
-                </div>
+            <div class="btn_group">
+                <a href="#" class="btn btn-ani btn-outline-secondary"><i class="sicon ico_print"></i>인쇄하기</a>
+                <!-- <a href="#" class="btn btn-ani btn-outline-secondary"><i class="sicon ico_share"></i>공유하기</a> -->
             </div>
+            <div class="tabs">
+                <div class="tab-header">
+                    <button rel="tab1" class="active">성장기록</button>
+                    <button rel="tab2">회차별</button>
+                    <button rel="tab3">과목별</button>
+                </div>
 
-            <div class="average_wrap">
-                <div class="title_box">
-                    <strong class="subtitle">
-                        <i class="hico hico3"></i>
-                        과목별 평균점수
-                    </strong>
-                </div>
-                <ul class="info_card">
-                    <li class="card__item">
-                        <span class="item num1"><b>국어</b></span>
-                        <span class="item num2"><b><em class="counter">80</em>점</b><em>6회</em></span>
-                    </li>
-                    <li class="card__item">
-                        <span class="item num1"><b>수학</b></span>
-                        <span class="item num2"><b><em class="counter">75</em>점</b><em>6회</em></span>
-                    </li>
-                    <li class="card__item">
-                        <span class="item num1"><b>사회</b></span>
-                        <span class="item num2"><b><em class="counter">85</em>점</b><em>6회</em></span>
-                    </li>
-                    <li class="card__item">
-                        <span class="item num1"><b>과학</b></span>
-                        <span class="item num2"><b><em class="counter">75</em>점</b><em>6회</em></span>
-                    </li>
-                    <li class="card__item">
-                        <span class="item num1"><b>영어</b></span>
-                        <span class="item num2"><b><em class="counter">85</em>점</b><em>6회</em></span>
-                    </li>
-                </ul>
-            </div>
+                <!-- 성장기록 탭 -->
+                <div class="tab-body" id="tab1">
+                    <div class="info_box">
 
-            <div class="class_list">
-                <div class="title_box">
-                    <strong class="subtitle">
-                        <i class="hico hico3"></i>
-                        학생목록
-                        <span>번호를 클릭하시면 해당 학생의 통계를 보실 수 있습니다.</span>
-                    </strong>
-                    <dvi class="btn_group">
-                        <button type="submit" class="btn btn-ani btn-quaternary"><i class="sicon ico_excel"></i>엑셀 내려받기</button>
-                        <button type="submit" class="btn btn-ani btn-primary"><i class="sicon ico_print_w"></i>인쇄하기</button>
-                    </dvi>
+                        <div class="item_subject">
+                            <span class="tit">
+                                <i class="ico_logo type1">온평가</i>
+                            </span>
+                            <ul class="student_info">
+                                <li><span>학교명</span>충남초등학교</li>
+                                <li><span>학년</span>5</li>
+                                <li><span>반</span>1</li>
+                            </ul>
+                        </div>
+                        <div class="text_box col4">
+                            <div class="item">
+                                <b class="title">국어</b>
+                                <div class="numcycle clickOpen">
+                                    <p>
+                                        <strong><em>1</em>회차 </strong>
+                                        <span>2024.07.16</span>
+                                    </p>
+                                    <button href="#" class="bn">횟수 더보기</button>
+                                    <div>
+                                        <a href="#"><span><em>3</em>회차</span><span>2024.08.27</span></span></a>
+                                        <a href="#"><span><em>2</em>회차</span><span>2024.07.16</span></span></a>
+                                        <a href="#"><span><em>1</em>회차</span><span>2024.03.27</span></span></a>
+                                        <button class="clickClose">횟수 더보기<span></span><em class="skip">닫기버튼</em></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <b class="title">사회</b>
+                                <div class="numcycle clickOpen">
+                                    <p>
+                                        <strong><em>0</em>회차 </strong>
+                                        <span>-</span>
+                                    </p>
+                                    <!-- <button href="#" class="bn">횟수 더보기</button>
+                                    <div>
+                                        <a href="#"><span><em>3</em>회차</span><span>2024.08.27</span></span></a>
+                                        <a href="#"><span><em>2</em>회차</span><span>2024.07.16</span></span></a>
+                                        <a href="#"><span><em>1</em>회차</span><span>2024.03.27</span></span></a>
+                                        <button class="clickClose">횟수 더보기<span></span><em class="skip">닫기버튼</em></button>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="item">
+                                <b class="title">수학</b>
+                                <div class="numcycle clickOpen">
+                                    <p>
+                                        <strong><em>5</em>회차 </strong>
+                                        <span>2024.07.16</span>
+                                    </p>
+                                    <button href="#" class="bn">횟수 더보기</button>
+                                    <div>
+                                        <a href="#"><span><em>3</em>회차</span><span>2024.08.27</span></span></a>
+                                        <a href="#"><span><em>2</em>회차</span><span>2024.07.16</span></span></a>
+                                        <a href="#"><span><em>1</em>회차</span><span>2024.03.27</span></span></a>
+                                        <button class="clickClose">횟수 더보기<span></span><em class="skip">닫기버튼</em></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <b class="title">과학</b>
+                                <div class="numcycle clickOpen">
+                                    <p>
+                                        <strong><em>2</em>회차 </strong>
+                                        <span>2024.07.16</span>
+                                    </p>
+                                    <button href="#" class="bn">횟수 더보기</button>
+                                    <div>
+                                        <a href="#"><span><em>2</em>회차</span><span>2024.07.16</span></span></a>
+                                        <a href="#"><span><em>1</em>회차</span><span>2024.03.27</span></span></a>
+                                        <button class="clickClose">횟수 더보기<span></span><em class="skip">닫기버튼</em></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <b class="title">영어</b>
+                                <div class="numcycle clickOpen">
+                                    <p>
+                                        <strong><em>3</em>회차 </strong>
+                                        <span>2024.07.16</span>
+                                    </p>
+                                    <button href="#" class="bn">횟수 더보기</button>
+                                    <div>
+                                        <a href="#"><span><em>3</em>회차</span><span>2024.08.27</span></span></a>
+                                        <a href="#"><span><em>2</em>회차</span><span>2024.07.16</span></span></a>
+                                        <a href="#"><span><em>1</em>회차</span><span>2024.03.27</span></span></a>
+                                        <button class="clickClose">횟수 더보기<span></span><em class="skip">닫기버튼</em></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="totalcommt">
+                        <strong>종합의견</strong>
+                        <ul>
+                            <li><b>6-1</b>반은 총 <b>10</b>회의 평가를 실시하였습니다. </li>
+                            <li>최근에 실시한 <b>수학</b>과목 평가의 정답률은 <b>82%</b>로 이전의 평가에 비해 <b>높/낮</b>아졌습니다. </li>
+                            <li><b>6-1</b>반은 <b>수학</b>과목의 성적이 높으며, <b>영어</b>과목의 성적이 낮은 편입니다. (<b>사회</b>과목의 평가에 응시한 기록이 없습니다. <b>사회</b>과목을 평가해시는 것을 추천합니다.)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="chart_group">
+                        <div class="chart_item num5">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico10"></i>성적 변화 추이</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>교과별 학력 변화 추이를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart1_1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart_item num5">
+                            <div class="title_box">
+                                <strong class="subtitle"><i class="hico2 hico9"></i>과목별 평균점수</strong>
+                                <div class="tooltip_wrap">
+                                    <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                    <div class="tooltip_box">
+                                        <p>교과별 평가 학생수를 나타냅니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart_item_con">
+                                <div class="graph_wrap">
+                                    <canvas id="managerChart1_2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
                 </div>
-               
-                <div class="table_wrap">
-                    <table class="tbl_basic center table-hover">
-                        <caption>학생 목록</caption>
-                        <colgroup>
-                            <col style="width:5%">
-                            <col style="width:5%">
-                            <col style="width:8%">
-                            <col style="width:8%">
-                            <col style="width:10%">
-                            <col style="width:10%">
-                            <col style="width:10%">
-                            <col style="width:10%">
-                            <col style="width:10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">학년</th>
-                                <th scope="col">반</th>
-                                <th scope="col">번호</th>
-                                <th scope="col">이름</th>
-                                <th scope="col" class="th_deep">국어</th>
-                                <th scope="col" class="th_deep">수학</th>
-                                <th scope="col" class="th_deep">사회</th>
-                                <th scope="col" class="th_deep">과학</th>
-                                <th scope="col" class="th_deep">영어</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>1</td>
-                                <td><a href="/sub040101.html" class="btn btn-ani classNum">1</a></td>
-                                <td>홍길동</td>
-                                <td class="below">75</td>
-                                <td class="below">70</td>
-                                <td class="below">79</td>
-                                <td class="below">70</td>
-                                <td class="below">75</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>1</td>
-                                <td><a href="#" class="btn btn-ani classNum">2</a></td>
-                                <td>홍길동</td>
-                                <td>80</td>
-                                <td>75</td>
-                                <td>85</td>
-                                <td>75</td>
-                                <td>85</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>1</td>
-                                <td><a href="#" class="btn btn-ani classNum">3</a></td>
-                                <td>홍길동</td>
-                                <td class="below">75</td>
-                                <td>75</td>
-                                <td class="below">80</td>
-                                <td>75</td>
-                                <td>85</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>1</td>
-                                <td><a href="#" class="btn btn-ani classNum">4</a></td>
-                                <td>홍길동</td>
-                                <td class="below">74</td>
-                                <td class="below">74</td>
-                                <td class="below">79</td>
-                                <td class="below">70</td>
-                                <td>85</td>
-                            </tr>
-                        </tbody>
-                    </table>  
+                <!-- //성장기록 탭 -->
+
+                <!-- 회차별 탭 -->
+                <div class="tab-body" id="tab2">
+                    <div class="tabin">
+                        <div class="tabtop">
+                            <ul class="student_info">
+                                <li><span>학교명</span>충남초등학교</li>
+                                <li><span>학년</span>5</li>
+                                <li><span>반</span>1</li>
+                            </ul>
+                            <div class="tabin-header">
+                                <button rel="tabin10" class="active">10</button>
+                                <button rel="tabin9">9</button>
+                                <button rel="tabin8">8</button>
+                                <button rel="tabin7">7</button>
+                                <button rel="tabin6">6</button>
+                                <button rel="tabin5">5</button>
+                                <button rel="tabin4">4</button>
+                                <span rel="tabin3" class="disable">3</span>
+                                <button rel="tabin2">2</button>
+                                <button rel="tabin1">1</button>
+                            </div>
+                        </div>
+                        <div class="tabin-body" id="tabin10" class="active">
+                            <div class="info_box">
+
+                                <div class="item_subject">
+                                    <span class="tit">
+                                        <i class="ico_logo type1">온평가</i>
+                                        <b>과학</b>
+                                    </span>
+                                    <ul class="subject_list">
+                                        <li>1. 지구와 달의 운동</li>
+                                        <li>2. 여러 가지 기체</li>   
+                                    </ul>
+                                </div>
+                                <div class="text_box col4">
+                                    <div class="item">
+                                        <b>응시일</b>
+                                        <p>2025.4.3</p>
+                                    </div>
+                                    <div class="item ico2">
+                                        <b>총 문항 수</b>
+                                        <p>20문항</p>
+                                        <span>상 5 / 중 10 / 하 5</span>
+                                    </div>
+                                    <div class="item ico3">
+                                        <b>응시인원</b>
+                                        <p>22명</p>
+                                        <span>총원 23 / 결원 1</span>
+                                    </div>
+                                    <div class="item ico4">
+                                        <b>평균응답시간</b>
+                                        <p><a href="#" id="popup_btn">28분</a></p>
+                                    </div>
+                                   
+                                    <!-- 원그랲프 들어가는 자리 -->
+                                    <div class="doughnut-chart" id="doughnutChart">
+                                        <span>전체정답률<b>75%</b></span>
+                                        <canvas id="doughnutChartCanvas"></canvas>
+                                    </div>
+                                    <!-- //원그랲프 들어가는 자리 -->
+                                </div>
+                            </div>
+                            <div class="totalcommt">
+                                <strong>종합의견</strong>
+                                <ul>
+                                    <li><b>과학</b>과 평가 결과 전체 정답률은 <b>65%</b>로 <b>보통</b> 수준의 성취를 보이고 있습니다. </li>
+                                    <li>학급 학생들은 <b>낮과 밤이 생기는 까닭</b>을 잘 알고 관련된 문항의 정답률이 높은 모습을 보이고 있으며, </li>
+                                    <li><b>지구의 공전과 별자리의 관계, 계절에 따른 별자리</b> 관련 문항을 풀이하는 데 어려움을 보이고 있습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="title_box">
+                                <strong class="subtitle">평가 문항정보</strong>
+                                <div class="select_wrap">
+                                    <select class="select" id="select">
+                                          <option selected="">높은정답률</option>
+                                          <option value="">낮은 정답률 순</option>
+                                    </select>
+                                    <a class="btn btn-ani btn-outline-secondary" href="#"><i class="ico ico-reset" aria-hidden="true"></i>초기화</a>
+                                </div>
+                            </div>
+                            <table class="tbl_basic center table-hover">
+                                <caption>평가문항정보</caption>
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:auto">
+                                    <col style="width:7%">
+                                    <col style="width:7%">
+                                    <col style="width:7%">
+                                    <col style="width:5%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">단원</th>
+                                        <th scope="col">성취기준</th>
+                                        <th scope="col">내용</th>
+                                        <th scope="col">정답률(학급)</th>
+                                        <th scope="col">정답률(충남)</th>
+                                        <th scope="col">문항유형</th>
+                                        <th scope="col">보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">01</th>
+                                        <td>2.지구와 달의 운동</td>
+                                        <td>[6과09-01]</td>
+                                        <td>낮과 밤이 생기는 까닭</td>
+                                        <td>
+                                            <div class="txt_tooltip_wrap">
+                                                <a class="tooltip">100%</a>
+                                                <div class="tooltip_box">
+                                                    <ul>
+                                                        <li class="correct"><b>정반응</b>김하나, 이두나, 한세나, 김가윤, 김나윤, 김다윤, 김라율...</li>
+                                                        <li class="wrong"><b>오반응</b>사나, 최오나, 정유나</li>
+                                                        <li><b>미응답</b>홍OO, 김OO, 이OO</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>80%</td>
+                                        <td>단순선택</td>
+                                        <td><a href="#" class="micon ico7">자세히보기</a></td>
+                                    </tr>
+                                    <tr class="active">
+                                        <th scope="row">01</th>
+                                        <td>2.지구와 달의 운동</td>
+                                        <td>[6과09-01]</td>
+                                        <td>낮과 밤이 생기는 까닭</td>
+                                        <td>100%</td>
+                                        <td>80%</td>
+                                        <td>단순선택</td>
+                                        <td><a href="#" class="icon arr_blue">펼침닫기</a></td>
+                                    </tr>
+                                    <!-- active -->
+                                    <tr>
+                                        <td colspan="8">
+                                            <ul class="tit_list">
+                                                <li><b>문항난이도</b>하</li>
+                                                <li><b>영역</b>지구와 우주 </li>
+                                                <li><b>맥락</b>순수과학</li>
+                                                <li><b>역량</b>과학 원리의 이해 및 적용 능력 </li>
+                                            </ul>
+                                            <div class="q_wrap">
+                                                <div><img src="/images/contents/img_question.png" alt=""></div>
+                                                <ul class="answerwrap">
+                                                    <li class="wrong">
+                                                        <em class="num">1</em>
+                                                        <b class="graph" style="width:11%"></b>
+                                                        <em><b>11%</b> 주요오답 </em>
+                                                        <span>[ 김하나, 이두나, 한세나, 김가윤, 김나윤, 김다윤, 김라율]</span>
+
+                                                    </li>
+                                                    <li class="correct">
+                                                        <em class="num">2</em>
+                                                        <b class="graph" style="width:72%"></b>
+                                                        <em><b>72%</b> 정답 </em>
+                                                        <span>[ 김하나, 이두나, 한세나, 김가윤, 김나윤, 김다윤, 김라율]</span></li>
+                                                    <li>
+                                                        <em class="num">3</em>
+                                                        <b class="graph" style="width:3%"></b>
+                                                        <em><b>3%</b> </em>
+                                                        <span>[ 김하나, 이두나, 한세나, 김가윤, 김나윤, 김다윤, 김라율]</span></li>
+                                                    <li>
+                                                        <em class="num">4</em>
+                                                        <b class="graph" style="width:3%"></b>
+                                                        <em><b>3%</b> </em>
+                                                        <span>[ 김하나, 이두나, 한세나, 김가윤, 김나윤, 김다윤, 김라율]</span></li>
+                                                    <li>
+                                                        <em class="num">5</em>
+                                                        <b class="graph" style="width:3%"></b>
+                                                        <em><b>3%</b> </em>
+                                                        <span>[ 김하나, 이두나, 한세나, 김가윤, 김나윤, 김다윤, 김라율]</span></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- //active -->
+                                    <tr>
+                                        <th scope="row">01</th>
+                                        <td>2.지구와 달의 운동</td>
+                                        <td>[6과09-01]</td>
+                                        <td>낮과 밤이 생기는 까닭</td>
+                                        <td>100%</td>
+                                        <td>80%</td>
+                                        <td>단순선택</td>
+                                        <td><a href="#" class="micon ico7">자세히보기</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabin-body" id="tabin9">9</div>
+                        <div class="tabin-body" id="tabin8">8</div>
+                        <div class="tabin-body" id="tabin7">7</div>
+                        <div class="tabin-body" id="tabin6">6</div>
+                        <div class="tabin-body" id="tabin5">5</div>
+                        <div class="tabin-body" id="tabin4">4</div>
+                        <div class="tabin-body" id="tabin3">3</div>
+                        <div class="tabin-body" id="tabin2">2</div>
+                        <div class="tabin-body" id="tabin1">1</div>
+                    </div>
                 </div>
+                <!-- //회차별 탭 -->
+
+                <!-- 과목별 탭 -->
+                <div class="tab-body" id="tab3">
+                    <div class="tabin">
+                        <div class="tabin-header">
+                            <button rel="tabin1" class="active">국어</button>
+                            <button rel="tabin2">수학</button>
+                            <button rel="tabin3">사회</button>
+                            <button rel="tabin4">과학</button>
+                            <button rel="tabin5">영어</button>
+                        </div>
+                        <div class="tabin-body" id="tabin1" class="active">
+                            
+                            
+                            <div class="info_box type3">
+
+                                <div class="item_subject">
+                                    <span class="tit">
+                                        <i class="ico_logo type1">온평가</i>
+                                        <b>국어</b>
+                                    </span>
+                                    <ul class="student_info">
+                                        <li><span>학교명</span>충남초등학교</li>
+                                        <li><span>학년</span>5</li>
+                                        <li><span>반</span>1</li>
+                                    </ul>
+                                </div>
+                                <div class="text_box">
+                                    <div class="item">
+                                        <b>응시 횟수</b>
+                                        <p>3회</p>
+                                        <span>최근 평가일: 7.16.</span>
+                                    </div>
+                                    <div class="item ico4">
+                                        <b>문항별<br>평균응답시간</b>
+                                        <p>30초</p>
+                                    </div>
+                                    <div class="item ico4">
+                                        <b>평가별<br>평균응답시간</b>
+                                        <p>24분</p>
+                                    </div>
+                                    <div class="item">
+                                        <ul>
+                                            <li>
+                                                <b>성취도가 높은 학생</b>
+                                                <span>김한나, 김두나, 한세나</span>
+                                            </li>
+                                            <li>
+                                                <b>교과 보충이 필요한 학생</b>
+                                                <span>김유나, 김가율, 이나율</span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="chart_group">
+                                <div class="chart_item num5">
+                                    <div class="title_box">
+                                        <strong class="subtitle"><i class="hico2 hico10"></i>성적 변화 추이</strong>
+                                        <div class="tooltip_wrap">
+                                            <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                            <div class="tooltip_box">
+                                                <p>성적 변화 추이를 나타냅니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart_item_con">
+                                        <ul class="legend_wrap">
+                                            <li class="total">
+                                                <b>과목평균점수</b>
+                                                <p>88점</p>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <b><span class="c_blue">최고</span>평균</b>
+                                                    <p>92점</p>
+                                                </div>
+                                                <div>
+                                                    <b><span class="c_red">최저</span>평균</b>
+                                                    <p>32점</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="graph_wrap">
+                                            <canvas id="managerChart3_1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chart_item num5">
+                                    <div class="title_box">
+                                        <strong class="subtitle"><i class="hico2 hico9"></i>단원별 성취도</strong>
+                                        <div class="tooltip_wrap">
+                                            <a class="tooltip"><i class="sicon ico_info">정보</i></a>
+                                            <div class="tooltip_box">
+                                                <p>단원별 성취도를 나타냅니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart_item_con">
+                                        <ul class="legend_wrap type2">
+                                            <li>
+                                                <b>성취도가 <span class="c_blue">높은</span>단원</b>
+                                                <p>4. 주장과 근거를 판단해요.</p>
+                                            </li>
+                                            <li>
+                                                <b>성취도가 <span class="c_red">낮은</span>단원</b>
+                                                <p>3. 짜임새 있게 구성해요.</p>
+                                            </li>
+                                        </ul>
+                                        <div class="graph_wrap">
+                                            <canvas id="managerChart3_2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="tabin-body" id="tabin2">탭2</div>
+                        <div class="tabin-body" id="tabin3">탭3</div>
+                        <div class="tabin-body" id="tabin4">탭4</div>
+                        <div class="tabin-body" id="tabin5">탭5</div>
+                    </div>
+                </div>
+                <!-- //과목별 탭 -->
             </div>
         </div>
     </section>
 
+ <!--평균응답시간 팝업-->
+ <div class="modal type2 modal-popup answerPop" id="popup_opne">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content lg">
+        <button type="button" class="modal-close bn_close bk"></button>
+        <div class="popup-wrap">
+            <div class="tabs">
+                <div class="tab-header">
+                    <button rel="poptab1" class="active">전체 응시 시간이 빠른 학생</button>
+                    <button rel="poptab2">시간 내 미완료 학생</button>
+                    <button rel="poptab3">반복 패턴 응답 학생</button>
+                </div>
+                <div class="tab-body" id="poptab1">
+                    <table class="tbl_basic center">
+						<caption>평균응답시간에서 전체응시 시간이 빠른학생목록</caption>
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:10%">
+                        </colgroup>
+						<thead>
+							<tr>
+								<th scope="col">순</th>
+								<th scope="col">이름</th>
+								<th scope="col">응답시간</th>
+								<th scope="col">정답률</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">5</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						</tbody>
+					</table>
+                </div>
+                <div class="tab-body" id="poptab2">
+                    <table class="tbl_basic center">
+						<caption>평균응답시간에서 시간 내 미완료 학생 목록</caption>
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:10%">
+                        </colgroup>
+						<thead>
+							<tr>
+								<th scope="col">순</th>
+								<th scope="col">이름</th>
+								<th scope="col">응답시간</th>
+								<th scope="col">정답률</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">5</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>홍길동</td>
+							<td>8분12초</td>
+							<td>15%</td>
+						</tr>
+						</tbody>
+					</table>
+                </div>
+                <div class="tab-body" id="poptab3">
+                    <table class="tbl_basic center">
+						<caption>평균응답시간에서 반복 패턴 응답 학생 목록</caption>
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:10%">
+                        </colgroup>
+						<thead>
+							<tr>
+								<th scope="col">순</th>
+								<th scope="col">패턴 분석</th>
+								<th scope="col">정답률</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">5</th>
+							<td>4문항 연속 정답 선택</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>주기적 응답</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>주기적 응답</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>6문항 연속 정답 선택</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<th scope="row">1</th>
+							<td>5문항 연속 정답 선택</td>
+							<td>15%</td>
+						</tr>
+						</tbody>
+					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--//평균응답시간 팝업-->
+    
 <!--[include]HEADER :: Start -->
 <div id="footer"></div>
 <!--[include]HEADER :: End -->
@@ -220,18 +724,245 @@
 
 </div>
 
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/waypoints.min.js"></script>
-<script type="text/javascript" src="/js/jquery.counterup.min.js"></script>
+<script>
 
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $('.counter').counterUp({
-            delay: 10,
-            time: 400
-        });
+
+ //토글
+ function createChart() {
+        chart.generateLegend = function() {
+            var text = '<ul>';
+            chart.data.datasets.forEach(function(dataset, index) {
+                text += '<li onclick="toggleDataset(' + index + ', \'' + legendContainerId + '\')">';
+                text += '<span></span>';// style="background-color:' + dataset.borderColor + '"
+                text += dataset.label;
+                text += '</li>';
+            });
+            text += '</ul>';
+            return text;
+        };
+
+        return chart;
+    }
+    // 데이터셋 토글 기능
+    function toggleDataset(index, legendContainerId) {
+        var chart;
+        switch(legendContainerId) {
+            case 'custom-legend': chart = chart1_2; break;
+        }
+        var meta = chart.getDatasetMeta(index);
+        meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+        chart.update();
+    }
+
+
+
+    //성적변화추이 1-1
+    var ctx = document.getElementById('managerChart1_1').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['', '원본', '1차', '2차', '3차', '4차', '5차', '6차', '7차', '8차', '9차', '10차'], //맨앞에 0값
+            datasets: [{
+                backgroundColor: 'rgb(133, 196, 255)',
+                borderWidth: 2,
+                borderColor: 'rgb(133, 196, 255)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [0, 20, 30, 20, 50, 40, 50, 90, 60, 80, 50, 55],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                y: {
+                    min: 0,
+                    max: 100,
+                    ticks: { stepSize: 20 },
+                },
+                x: {
+                    //display: false
+                },
+            }
+        }        
+    }); 
+
+
+    //과목별 평균점수 1-2
+    var ctx = document.getElementById('managerChart1_2').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['영어', '과학', '사회', '수학', '국어'],
+            datasets: [{
+                backgroundColor: [
+                    'rgba(201, 133, 255, .3)',
+                    'rgba(66, 211, 177, .3)',
+                    'rgba(255, 174, 53, .3)',
+                    'rgba(230, 142, 171, .3)',
+                    'rgba(133, 196, 255, .3)',
+                ],
+                borderColor:[
+                    'rgba(201, 133, 255, 1)',
+                    'rgba(66, 211, 177, 1)',
+                    'rgba(255, 174, 53, 1)',
+                    'rgba(230, 142, 171, 1)',
+                    'rgba(133, 196, 255, 1)',
+                ],
+                borderWidth: 1,
+                barThickness: 20, //그래프 굵기
+                borderRadius: 20, // 그래프 둥글기
+                data:[300, 400, 500, 785, 900],
+            }]
+        },
+        options:{
+            indexAxis: 'y', //수평그래프
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: 1000,
+                    ticks: { stepSize: 100 },
+                },
+                y: {
+                    //display: false
+                },
+            }
+        }        
+    }); 
+
+
+    //원그래프
+    const canvas = document.getElementById("doughnutChartCanvas");
+    const value = 60;
+    const data = {
+    datasets: [
+        {
+        data: [value, 100 - value],
+        backgroundColor: ["#3157DD", "transparent"],
+        borderWidth: 0,
+        borderRadius: 30,
+        },
+    ],
+    };
+    const options = {
+        cutout: '85%',
+        hover: { mode: null },
+        plugins: {
+        legend: {
+            display: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+        },
+    }
+    new Chart(canvas, {
+    type: "doughnut",
+    data,
+    options,
     });
+
+
+
+
+    //성적변화추이 3-1
+    var ctx = document.getElementById('managerChart3_1').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['', '원본', '1차', '2차', '3차', '4차', '5차', '6차', '7차', '8차', '9차', '10차'], //맨앞에 0값
+            datasets: [{
+                backgroundColor: 'rgb(133, 196, 255)',
+                borderWidth: 2,
+                borderColor: 'rgb(133, 196, 255)',
+                barThickness: 20,
+                borderRadius: 20,
+                data: [0, 20, 30, 20, 50, 40, 50, 90, 60, 80, 50, 55],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                y: {
+                    min: 0,
+                    max: 100,
+                    ticks: { stepSize: 20 },
+                },
+                x: {
+                    //display: false
+                },
+            }
+        }        
+    }); 
+
+
+    //과목별 평균점수 3-2
+    var ctx = document.getElementById('managerChart3_2').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['영어', '과학', '사회', '수학', '국어'],
+            datasets: [{
+                backgroundColor: [
+                    'rgba(201, 133, 255, .3)',
+                    'rgba(66, 211, 177, .3)',
+                    'rgba(255, 174, 53, .3)',
+                    'rgba(230, 142, 171, .3)',
+                    'rgba(133, 196, 255, .3)',
+                ],
+                borderColor:[
+                    'rgba(201, 133, 255, 1)',
+                    'rgba(66, 211, 177, 1)',
+                    'rgba(255, 174, 53, 1)',
+                    'rgba(230, 142, 171, 1)',
+                    'rgba(133, 196, 255, 1)',
+                ],
+                borderWidth: 1,
+                barThickness: 20, //그래프 굵기
+                borderRadius: 20, // 그래프 둥글기
+                data:[300, 400, 500, 785, 900],
+            }]
+        },
+        options:{
+            indexAxis: 'y', //수평그래프
+            responsive: true,
+            maintainAspectRatio :false,//그래프의 비율 유지 
+            plugins:{
+                legend: {display:false}, // 범례 숨김
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: 1000,
+                    ticks: { stepSize: 100 },
+                },
+                y: {
+                    //display: false
+                },
+            }
+        }        
+    }); 
+
+$(".clickOpen > button").on("click",function(){
+    $(this).parent().addClass("on");
+});
+$(".clickOpen button.clickClose").on("click",function(){
+    $(this).parents(".clickOpen").removeClass("on");
+});
 </script>
+
 
 </body>
 </html>
