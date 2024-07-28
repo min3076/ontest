@@ -157,7 +157,7 @@
 .colwrap .lcon a.current span{border-color:#fff}
 
 .colwrap .rcon{width:calc(100% - 200px);}
-.colwrap .rcon .tabcon{display:flex;flex-direction:column;border: 1px solid var(--gray_120);width:100%;border-radius: 8px;}
+.colwrap .rcon .tabcon{display:flex;flex-direction:column;border: 1px solid var(--gray_40);width:100%;border-radius: 8px;}
 .colwrap .rcon .tit_info{display:flex;flex-direction:row;align-items:center;justify-content: space-between;padding:20px 50px;border-bottom:1px solid var(--blue_40);border-radius:8px 8px 0 0;background:var(--blue_10)}
 .colwrap .rcon .tit_info .tit{font-size:20px;font-family: var(--f_scd);}
 .colwrap .rcon .tit_info .student_info{margin:0;}
