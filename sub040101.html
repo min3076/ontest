@@ -182,7 +182,7 @@
 
                         <!-- 회차별 탭 -->
                         <div class="tab-body" id="tab2">
-                            <a href="#" class="btn btn-ani btn-outline-secondary btn_share"><i class="sicon ico_share"></i>공유하기</a>
+                            <a href="#" onclick="modalOpen('modal-result');" class="btn btn-ani btn-outline-secondary btn_share"><i class="sicon ico_share"></i>공유하기</a>
                             <div class="tabin">
                                 <div class="tabtop">
                                     <div class="tabin-header">
@@ -336,13 +336,13 @@
                         <div class="tab-body" id="tab3">
                             <div class="tabin">
                                 <div class="tabin-header">
-                                    <button rel="tabin1" class="active">국어</button>
-                                    <button rel="tabin2">수학</button>
-                                    <button rel="tabin3">사회</button>
-                                    <button rel="tabin4">과학</button>
-                                    <button rel="tabin5">영어</button>
+                                    <button rel="tabin3-1" class="active">국어</button>
+                                    <button rel="tabin3-2">수학</button>
+                                    <button rel="tabin3-3">사회</button>
+                                    <button rel="tabin3-4">과학</button>
+                                    <button rel="tabin3-5" onclick="modalOpen('modal-company');" >영어</button>
                                 </div>
-                                <div class="tabin-body" id="tabin1" class="active">
+                                <div class="tabin-body" id="tabin3-1" class="active">
                                     <div class="tabcon">
                                         <div class="tit_info">
                                             <span class="tit">
@@ -431,10 +431,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tabin-body" id="tabin2">탭2</div>
-                                <div class="tabin-body" id="tabin3">탭3</div>
-                                <div class="tabin-body" id="tabin4">탭4</div>
-                                <div class="tabin-body" id="tabin5">탭5</div>
+                                <div class="tabin-body" id="tabin3-2">수학탭</div>
+                                <div class="tabin-body" id="tabin3-3">사회탭</div>
+                                <div class="tabin-body" id="tabin3-4">과학탭</div>
+                                <div class="tabin-body" id="tabin3-5">영어탭</div>
                             </div>
                         </div>
                         <!-- //과목별 탭 -->
@@ -445,169 +445,190 @@
         </div>
     </section>
 
- <!--평균응답시간 팝업-->
- <div class="modal type2 modal-popup answerPop" id="popup_opne">
+<!--공유평가기록 팝업-->
+<div class="modal type2 fullsize" id="modal-result">
     <div class="modal-background is-click-disabled"></div>
     <div class="modal-content lg">
-        <button type="button" class="modal-close bn_close bk"></button>
+        <button type="button" class="modal-close bn_close bk" onclick="modalClose('modal-result');"></button>
         <div class="popup-wrap">
-            <div class="tabs">
-                <div class="tab-header">
-                    <button rel="poptab1" class="active">전체 응시 시간이 빠른 학생</button>
-                    <button rel="poptab2">시간 내 미완료 학생</button>
-                    <button rel="poptab3">반복 패턴 응답 학생</button>
+            <section id="content" class="result_wrap state">
+                <div class="layout">
+                    <div class="sub_title">
+                        <h1>
+                            <i class="ico_logo type1">온평가</i> 
+                            평가기록
+                        </h1>
+        
+                        <div class="inner">
+                            <ul class="student_info">
+                                <li><span>학교명</span>충남초등학교</li>
+                                <li><span>학년</span>5</li>
+                                <li><span>반</span>1</li>
+                                <li><span>번호</span>3</li>
+                                <li><span>이름</span>홍길동</li>
+                            </ul>
+                            <div class="btn_group">
+                                <a href="#" class="btn btn-ani btn-text"><i class="sicon ico_print"></i>인쇄하기</a>
+                                <a href="#" class="btn btn-ani btn-text"><i class="sicon ico_share"></i>공유하기</a>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="text_info">
+                        <div class="info_box">
+        
+                            <div class="item_subject">
+                                <span class="tit">
+                                    <b>과학</b>
+                                </span>
+                                <ul class="subject_list">
+                                    <li>1. 지구와 달의 운동</li>
+                                    <li>2. 여러 가지 기체</li>   
+                                </ul>
+                            </div>
+                            <div class="text_box col3">
+                                <div class="item">
+                                    <b>응시일</b>
+                                    <p>2025.4.3</p>
+                                </div>
+                                <div class="item ico2">
+                                    <b>총 문항 수</b>
+                                    <p>20문항</p>
+                                    <span>상 5 / 중 10 / 하 5</span>
+                                </div>
+                            
+                                <!-- 원그랲프 들어가는 자리 -->
+                                <div class="doughnut-chart" id="doughnutChart">
+                                    <span>전체정답률<b>75%</b></span>
+                                    <canvas id="doughnutChartCanvas"></canvas>
+                                </div>
+                                <!-- //원그랲프 들어가는 자리 -->
+                            </div>
+                        </div>
+                        <div class="totalcommt">
+                            <strong>종합의견</strong>
+                            <ul>
+                                <li><b>홍길동</b> 학생은 <b>낮과 밤이 생기는 까닭</b>을 잘 알고 관련된 문항의 정답률이 높은 모습을 보이고 있으며, </li>
+                                <li><b>지구의 공전과 별자리의 관계, 계절에 따른 별자리</b> 관련 문항을 풀이하는 데 어려움을 보이고 있습니다</li>
+                            </ul>
+                        </div>
+                        <div class="title_box">
+                            <strong class="subtitle">평가 문항정보</strong>
+                        </div>
+                        <table class="tbl_basic center table-hover">
+                            <caption>평가문항정보</caption>
+                            <colgroup>
+                                <col style="width:5%">
+                                <col style="width:20%">
+                                <col style="width:20%">
+                                <col style="width:auto">
+                                <col style="width:7%">
+                                <col style="width:5%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">단원</th>
+                                    <th scope="col">성취기준</th>
+                                    <th scope="col">평가요소</th>
+                                    <th scope="col">정답여부</th>
+                                    <th scope="col">보기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">01</th>
+                                    <td>2.지구와 달의 운동</td>
+                                    <td>[6과09-01]</td>
+                                    <td>낮과 밤이 생기는 까닭</td>
+                                    <td><i class="sicon ico_o">정답</i></td>
+                                    <td><a href="#" class="micon ico7">자세히보기</a></td>
+                                </tr>
+                                <tr class="active">
+                                    <th scope="row">01</th>
+                                    <td>2.지구와 달의 운동</td>
+                                    <td>[6과09-01]</td>
+                                    <td>낮과 밤이 생기는 까닭</td>
+                                    <td><i class="sicon ico_o">정답</i></td>
+                                    <td><a href="#" class="icon arr_blue">펼침닫기</a></td>
+                                </tr>
+                                <!-- active -->
+                                <tr>
+                                    <td colspan="8">
+                                        <ul class="tit_list">
+                                            <li><b>학생응답</b>4,5 </li>
+                                            <li class="correct"><b>정답</b>4,5</li>
+                                        </ul>
+                                        <div class="q_wrap">
+                                            <div><img src="/images/contents/img_question.png" alt=""></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- //active -->
+                                <tr>
+                                    <th scope="row">01</th>
+                                    <td>2.지구와 달의 운동</td>
+                                    <td>[6과09-01]</td>
+                                    <td>낮과 밤이 생기는 까닭</td>
+                                    <td><i class="sicon ico_x">오답</i></td>
+                                    <td><a href="#" class="micon ico7">자세히보기</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        
+        
+        
                 </div>
-                <div class="tab-body" id="poptab1">
-                    <table class="tbl_basic center">
-						<caption>평균응답시간에서 전체응시 시간이 빠른학생목록</caption>
-                        <colgroup>
-                            <col style="width:10%">
-                            <col style="width:10%">
-                            <col style="width:auto">
-                            <col style="width:10%">
-                        </colgroup>
-						<thead>
-							<tr>
-								<th scope="col">순</th>
-								<th scope="col">이름</th>
-								<th scope="col">응답시간</th>
-								<th scope="col">정답률</th>
-							</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<th scope="row">5</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">1</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						</tbody>
-					</table>
+        
+                <div class="btn_group">
+                    <a href="/sub040101.html" class="btn btn-ani btn-primary lg">돌아가기</a>
                 </div>
-                <div class="tab-body" id="poptab2">
-                    <table class="tbl_basic center">
-						<caption>평균응답시간에서 시간 내 미완료 학생 목록</caption>
-                        <colgroup>
-                            <col style="width:10%">
-                            <col style="width:10%">
-                            <col style="width:auto">
-                            <col style="width:10%">
-                        </colgroup>
-						<thead>
-							<tr>
-								<th scope="col">순</th>
-								<th scope="col">이름</th>
-								<th scope="col">응답시간</th>
-								<th scope="col">정답률</th>
-							</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<th scope="row">5</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">1</th>
-							<td>홍길동</td>
-							<td>8분12초</td>
-							<td>15%</td>
-						</tr>
-						</tbody>
-					</table>
-                </div>
-                <div class="tab-body" id="poptab3">
-                    <table class="tbl_basic center">
-						<caption>평균응답시간에서 반복 패턴 응답 학생 목록</caption>
-                        <colgroup>
-                            <col style="width:10%">
-                            <col style="width:auto">
-                            <col style="width:10%">
-                        </colgroup>
-						<thead>
-							<tr>
-								<th scope="col">순</th>
-								<th scope="col">패턴 분석</th>
-								<th scope="col">정답률</th>
-							</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<th scope="row">5</th>
-							<td>4문항 연속 정답 선택</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>주기적 응답</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>주기적 응답</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>6문항 연속 정답 선택</td>
-							<td>15%</td>
-						</tr>
-						<tr>
-							<th scope="row">1</th>
-							<td>5문항 연속 정답 선택</td>
-							<td>15%</td>
-						</tr>
-						</tbody>
-					</table>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
-</div><!--//평균응답시간 팝업-->
-    
+</div>
+<!--//공유평가기록 팝업-->
+
+<!--출판사선택 팝업-->
+<div class="modal type2 modal-popup" id="modal-company">
+    <div class="modal-background is-click-disabled"></div>
+    <div class="modal-content lg">
+        <button type="button" class="modal-close bn_close bk" onclick="modalClose('modal-company');"></button>
+        <h2>출판사 선택</h2>
+        <div class="popup-wrap create_box">
+            <ul class="subject__select">
+                <li>
+                    <input type="radio" id="e_company1" name="e_company">
+                    <label for="e_company1" class="box_btn">천재(함)</label>
+                </li>
+                <li>
+                    <input type="radio" id="e_company2" name="e_company">
+                    <label for="e_company2" class="box_btn">YBM(김)</label>
+                </li>
+                <li>
+                    <input type="radio" id="e_company3" name="e_company">
+                    <label for="e_company3" class="box_btn">YBM(최)</label>
+                </li>
+                <li>
+                    <input type="radio" id="e_company4" name="e_company">
+                    <label for="e_company4" class="box_btn">동아</label>
+                </li>
+                <li>
+                    <input type="radio" id="e_company5" name="e_company">
+                    <label for="e_company5" class="box_btn">대교</label>
+                </li>
+            </ul>
+        </div>
+        <div class="btn_group">
+            <a class="btn btn-ani btn-primary lg" id="popup_btn">확인</a>
+        </div>
+    </div>
+</div><!--//출판사선택 팝업-->
+
+
+
 <!--[include]HEADER :: Start -->
 <div id="footer"></div>
 <!--[include]HEADER :: End -->
@@ -617,6 +638,14 @@
 </div>
 
 <script>
+//다중 레이어팝업
+function modalOpen(modal_id){
+    $('.modal' + '#' + modal_id).css({display: 'flex'});
+}
+
+function modalClose(modal_id){
+    $('.modal' + '#' + modal_id).css({display: 'none'});
+}
 
 
  //토글
