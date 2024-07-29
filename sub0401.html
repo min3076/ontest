@@ -265,7 +265,7 @@
                                     </div>
                                     <div class="item ico4">
                                         <b>평균응답시간</b>
-                                        <p><a href="#" id="popup_btn">28분</a></p>
+                                        <p><a href="#" onclick="modalOpen('modal-tab');" id="modal-tab" >28분</a></p>
                                     </div>
                                    
                                     <!-- 원그랲프 들어가는 자리 -->
@@ -553,11 +553,11 @@
         </div>
     </section>
 
- <!--평균응답시간 팝업-->
- <div class="modal type2 modal-popup answerPop" id="popup_opne">
+<!--평균응답시간 팝업-->
+<div class="modal type2 modal-popup answerPop" id="modal-tab">
     <div class="modal-background is-click-disabled"></div>
     <div class="modal-content lg">
-        <button type="button" class="modal-close bn_close bk"></button>
+        <button type="button" class="modal-close bn_close bk" onclick="modalClose('modal-tab');"></button>
         <div class="popup-wrap">
             <div class="tabs">
                 <div class="tab-header">
@@ -714,8 +714,10 @@
             </div>
         </div>
     </div>
-</div><!--//평균응답시간 팝업-->
-    
+</div>
+<!--//평균응답시간 팝업-->
+
+
 <!--[include]HEADER :: Start -->
 <div id="footer"></div>
 <!--[include]HEADER :: End -->
@@ -725,7 +727,14 @@
 </div>
 
 <script>
+//다중 레이어팝업
+function modalOpen(modal_id){
+    $('.modal' + '#' + modal_id).css({display: 'flex'});
+}
 
+function modalClose(modal_id){
+    $('.modal' + '#' + modal_id).css({display: 'none'});
+}
 
  //토글
  function createChart() {
